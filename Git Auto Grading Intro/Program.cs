@@ -4,33 +4,58 @@
     {
         public static void Main(string[] args)
         {
-            // Welcome to the calculator project, complete the methods
+            Console.WriteLine("Enter a number!");
+            int a = int.Parse(Console.ReadLine());
+            Console.WriteLine("Choose a method: Add, Subtract, Multiply, or Divide");
+            string method = Console.ReadLine();
+            Console.WriteLine("Enter another number!");
+            int b = int.Parse(Console.ReadLine());
+            Console.WriteLine(solve(method));
 
-            // Call the methods here ex.
-            int result = Add(2, 3);
-            Console.WriteLine("The result of adding 2 and 3 is: " + result);
+            
         }
 
-        // Methods Here
+        public static string solve(string method)
+        {
+            if (method == "Add")
+            {
+                return "That equals " + Add;
+            }
+            if (method == "Subtract")
+            {
+                return "That equals " + Subtract;
+            }
+            if (method == "Multiply")
+            {
+                return "That equals " + Multiply;
+            }
+            if (method == "Divide")
+            {
+                return "Thats equals " + Divide;
+            }
+            else
+            {
+                return "Make sure you type the methods exactly as displayed";
+            }
+        }
+
         public static int Add(int a, int b)
         {
-            // Code
-            return 0; // Placeholder
+            return a + b;
         }
         public static int Subtract(int a, int b)
         {
-            // Code
-            return 0; // Placeholder
+            return a - b;
         }
         public static int Multiply(int a, int b)
         {
-            // Code
-            return 0; // Placeholder
+            return a * b;
         }
         public static decimal Divide(int a, int b)
         {
-            // Code
-            return 0; // Placeholder
+            return a / b;
         }
     }
 }
+
+
